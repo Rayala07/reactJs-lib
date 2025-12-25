@@ -1,4 +1,5 @@
 import Counter from "./components/Counter";
+import SearchFilter from "./components/SearchFilter";
 import UserInput from "./components/UserInput";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className="app-container">
       <Counter />
       <UserInput />
+      <SearchFilter />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 const Card = ({ userData, onDelete }) => {
-
   return (
     <div className="flex gap-8">
       {userData.map((user, idx) => {

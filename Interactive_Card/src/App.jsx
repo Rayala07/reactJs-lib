@@ -6,7 +6,11 @@ const App = () => {
   const [userData, setData] = useState([]);
 
   console.log(userData);
-  
+
+  const deleteHandler = (idx) => {
+    setData((oldData) => oldData.filter((_, i) => i !== idx));
+  };
+
   return (
     <div
       className="bg-[#151515] 
@@ -15,7 +19,7 @@ const App = () => {
       p-4"
     >
       <Inputs setUserData={setData} />
-      <Card userData={userData} />
+      <Card userData={userData} onDelete={deleteHandler} />
     </div>
   );
 };

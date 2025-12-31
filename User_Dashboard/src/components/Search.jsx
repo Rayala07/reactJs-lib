@@ -4,9 +4,9 @@ const Search = ({ text, setText }) => {
   };
 
   return (
-    <div className="py-4">
+    <div className="mb-6">
       <input
-        className="p-1 border border-white text-white"
+        className="w-full bg-black border border-[#333] text-white p-3 rounded-lg focus:outline-none focus:border-indigo-500"
         type="text"
         placeholder="Search"
         value={text}

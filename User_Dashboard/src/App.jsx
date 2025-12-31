@@ -17,13 +17,23 @@ const App = () => {
   );
 
   const deleteHandler = (idx) => {
-    console.log(`Deleted ${idx + 1}`);
+    setData((oldData) => {
+      const updatedData = oldData.filter((_, i) => i !== idx);
+      localStorage.setItem("user-data", JSON.stringify(updatedData));
+      return updatedData;
+    });
   };
   return (
-    <div className="h-screen bg-[black] p-8">
-      <AddUser setData={setData} />
-      <Search text={searchText} setText={setSearchText} />
-      <Card userData={filteredUser} runDelete={deleteHandler} />
+    <div className="min-h-screen bg-[#0e0e0e] p-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="md:col-span-1">
+          <AddUser setData={setData} />
+        </div>
+        <div className="md:col-span-2">
+          <Search text={searchText} setText={setSearchText} />
+          <Card userData={filteredUser} runDelete={deleteHandler} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,6 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Users from "./Pages/Users";
 import UserDetails from "./Pages/UserDetails";
-import Nav from "./components/Nav";
 import Layout from "./components/Layout";
 
 const App = () => {
